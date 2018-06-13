@@ -49,7 +49,7 @@ function Collection(collezioni){
     collezioni.collections.forEach(function(item, i){
        $('#card').append(
             '<h2>' + item.collection.title + '</h2>' +
-            '<img src="' + item.collection.image_url + '"/>'
+            '<img class="coll_name" src="' + item.collection.image_url + '"/>'
        )
     })
 }
