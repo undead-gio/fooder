@@ -1,3 +1,20 @@
-.coll_name{
+.coll_img{
   width: 100%;
+}
+
+.near_img{
+  width: 200px;
+}
+
+.loc{
+  color: white;
+  font-size: 30px;
+}
+
+.card-near{
+
+}
+
+.card-coll{
+
 }

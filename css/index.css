@@ -1,4 +1,4 @@
-/* Import */
+/* Import css */
 
 @import 'dynamic_element.css';
 
@@ -41,7 +41,7 @@ body{
 }
 
 .logo{
-  font-size: 40px;
+  font-size: 90px;
   color: white;
 }
 

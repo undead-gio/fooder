@@ -23,19 +23,43 @@
     <div class=" container-fluid header">
     </div>
     <div class=" container-fluid header_content">
-      <h1 class="logo">Fooder</h1>
-      <input class="search" type="text" name="search" placeholder="Nome ristorante, tipo cucina o piatto">
+      <div class="row">
+        <div class="col-sm">
+          <h1 class="logo">Fooder</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <input class="search" type="text" name="search" placeholder="Nome ristorante, tipo cucina o piatto">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <img src="source/location_white.svg" alt="location icon" width="75px">
+          <span id="position" class="loc"></span>
+        </div>
+      </div>
     </div>
 
-    <div class=" container-fluid collection">
+    <div class=" container-fluid near error">
+      <h1>Ristoranti vicini</h1>
+      <div class="row">
+        <div class="col-sm">
+          <div id="card-near"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class=" container-fluid collection error">
       <h1>Collezioni</h1>
       <div class="row">
         <div class="col-sm">
-          <div id="card"></div>
+          <div id="card-coll"></div>
         </div>
       </div>
-
     </div>
+
+
 
 
     <!-- bootstrap js -->
