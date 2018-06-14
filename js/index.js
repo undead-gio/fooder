@@ -3,6 +3,19 @@ let latitude = ''
     id_entity = ''
     type_entity = ''
 
+    w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+    w = w +"px";
+/*$( document ).ready(function() {
+  function RespImage() {
+
+  }
+});*/
+
+$(".height").css("height", w);
+
+
 function success(position){
     latitude = position.coords.latitude
     longitude = position.coords.longitude
@@ -62,7 +75,7 @@ function datiArrivati(city){
             data: {
                 lat: latitude,
                 lon: longitude,
-                count: 10,
+                count: 8,
             },
             headers: {
                 "user-key": "f7b021777643a1e7a87e4d0f3a2792ff"
@@ -72,27 +85,31 @@ function datiArrivati(city){
         })
 }
 
+function Nearby(near) {
+  console.log(near)
+  near.restaurants.forEach(function(item, i){
+     $('.near').append(
+       '<div class="row justify-content-center"><div class="col-sm align-self-center"><div class="card-near"><img class="near-img" src="'
+       + item.restaurant.featured_image + '"/>' +
+       '<span class="restaurant-card-title">' + item.restaurant.name +
+       '</span></div></div></div>'
+
+     )
+  })
+}
 
 function Collection(collezioni){
     console.log(collezioni)
     collezioni.collections.forEach(function(item, i){
-       $('#card-coll').append(
-            '<h2>' + item.collection.title + '</h2>' +
-            '<img class="coll_img" src="' + item.collection.image_url + '"/>'
+       $('.collection').append(
+         '<div class="row"><div class="col-sm"><div class="card-coll"><h2>'
+         + item.collection.title + '</h2>' +
+         '<img class="coll-img" src="' + item.collection.image_url + '"/>' +
+         '</span></div></div></div>'
        )
     })
 }
 
-
-function Nearby(near) {
-  console.log(near)
-  near.restaurants.forEach(function(item, i){
-     $('#card-near').append(
-          '<img class="near-img" src="' + item.restaurant.photos_url + '"/>' +
-          '<h1 class="restaurant-card-title">' + item.restaurant.name + '</h1>'
-     )
-  })
-}
 
 
 

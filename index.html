@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
 
+
     <title>Fooder</title>
 
     <!-- jQuery-->
@@ -18,24 +19,29 @@
   <body>
 
     <!-- header -->
-    <div class="container-fluid cover-img">
+    <div class="container-fluid cover-img height">
     </div>
-    <div class=" container-fluid header">
+    <div class=" container-fluid header height">
     </div>
-    <div class=" container-fluid header_content">
+    <div class=" container-fluid header_content height">
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10 center-align">
           <h1 class="logo">Fooder</h1>
         </div>
+        <div class="col-sm-1"></div>
       </div>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
           <input class="search" type="text" name="search" placeholder="Nome ristorante, tipo cucina o piatto">
         </div>
+        <div class="col-sm-1"></div>
       </div>
       <div class="row">
-        <div class="col-sm">
-          <img src="source/location_white.svg" alt="location icon" width="75px">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10  rx-align">
+          <img class="location-icon"src="source/location_white.svg" alt="location icon">
           <span id="position" class="loc"></span>
         </div>
       </div>
@@ -43,20 +49,10 @@
 
     <div class=" container-fluid near error">
       <h1>Ristoranti vicini</h1>
-      <div class="row">
-        <div class="col-sm">
-          <div id="card-near"></div>
-        </div>
-      </div>
     </div>
 
     <div class=" container-fluid collection error">
       <h1>Collezioni</h1>
-      <div class="row">
-        <div class="col-sm">
-          <div id="card-coll"></div>
-        </div>
-      </div>
     </div>
 
 

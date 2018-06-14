@@ -1,9 +1,9 @@
-.coll_img{
+.coll-img{
   width: 100%;
 }
 
-.near_img{
-  width: 200px;
+.near-img{
+  width: 400px;
 }
 
 .loc{
@@ -12,7 +12,14 @@
 }
 
 .card-near{
-
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 250px;
+  width: 800px;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.35);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.35);
+  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.35);
+  border-radius: 20px;
 }
 
 .card-coll{
