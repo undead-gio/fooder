@@ -3,17 +3,6 @@ let latitude = ''
     id_entity = ''
     type_entity = ''
 
-    w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-
-    w = w +"px";
-/*$( document ).ready(function() {
-  function RespImage() {
-
-  }
-});*/
-
-$(".height").css("height", w);
 
 
 function success(position){
@@ -35,6 +24,8 @@ function success(position){
 
 function error(err){
     console.error(err)
+    $('.near').css('display', 'none');
+    $('.collection').css('display', 'none');
     alert("Per l'utilizzo di questa applicazione è necessaria la geolocalizzazione");
 }
 
@@ -89,30 +80,40 @@ function Nearby(near) {
   console.log(near)
   near.restaurants.forEach(function(item, i){
      $('.near').append(
-       '<div class="row justify-content-center"><div class="col-sm align-self-center"><div class="card-near"><img class="near-img" src="'
+       '<div class="row"><div class="col-sm-12"><div class="card-near" data-id="' + item.restaurant.id +
+       '"><img class="near-img" src="'
        + item.restaurant.featured_image + '"/>' +
        '<span class="restaurant-card-title">' + item.restaurant.name +
-       '</span></div></div></div>'
-
+       '</span></div></div></div></div>'
      )
   })
+  $('.card-near').click(function(event) {
+    let id = $(this).data('id');
+    console.log("Elemento cliccato", $(this).data('id'));
+
+    /*$('.mod-page').animate({
+  	   opacity:1
+  	}, "slow", function(){
+  		$(".mod-page").css({"display":"inline"})
+  	});*/
+  });
 }
 
 function Collection(collezioni){
     console.log(collezioni)
     collezioni.collections.forEach(function(item, i){
-       $('.collection').append(
-         '<div class="row"><div class="col-sm"><div class="card-coll"><h2>'
-         + item.collection.title + '</h2>' +
-         '<img class="coll-img" src="' + item.collection.image_url + '"/>' +
-         '</span></div></div></div>'
+       $('.coll-row').append(
+         '<div class="col-sm-12 col-md-3 ow-pad"><div class="card-coll" style="background-image:url('
+         + item.collection.image_url +')">' +
+         '<div class="all-text-coll"><h2 class="title-coll">' + item.collection.title + '</h2>' +
+         '<h3 class="descr-coll">'
+         + item.collection.description + '</h2>' +
+         '<div class="red-line"></div>' +
+         '<h3 class="title-coll">' + item.collection.res_count + ' Ristoranti </h2>' +
+         '</div></div></div>'
        )
     })
 }
-
-
-
-
 
 
 

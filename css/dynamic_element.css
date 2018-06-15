@@ -1,27 +1,75 @@
-.coll-img{
-  width: 100%;
-}
-
-.near-img{
-  width: 400px;
-}
 
 .loc{
   color: white;
   font-size: 30px;
+  vertical-align: middle;
 }
-
+ /* Neaar Card*/
 .card-near{
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   height: 250px;
-  width: 800px;
+  width: 100%;
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.35);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.35);
   box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.35);
-  border-radius: 20px;
+  border-radius: 5px;
 }
+
+.near-img{
+  width: 400px;
+  object-fit: cover;
+  width:330px;
+  height:230px;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+
+/* Coll card */
 
 .card-coll{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width:100%;
+  height:25vw;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.35);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.35);
+  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.35);
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.all-text-coll{
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  color: white;
+}
+
+.title-coll{
 
 }
+
+.descr-coll{
+  width: 250px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.red-line{
+  margin-top: 20px;
+  height: 2px;
+  width: 150px;
+  background-color: #f65b5b;
+}
+
+/*.cover-coll{
+  width: 100%;
+  height:25vw;
+  background-color: #303030;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+}*/

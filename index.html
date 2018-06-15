@@ -2,7 +2,7 @@
 <html lang="it" dir="ltr">
   <head>
     <meta charset="utf-8">
-
+    <meta name="viewport" content="user-scalable=no" />
 
     <title>Fooder</title>
 
@@ -17,13 +17,28 @@
 
   </head>
   <body>
+    <!-- navbar -->
+    <div class="navbar">
+      <div class="row" style="height: 100%">
+        <div class="col-sm-1">
+          <img src="source/search_black.svg" alt="search icon">
+        </div>
+        <div class="col-sm-10">
+          <h2 class="nav-logo">Fooder</h2>
+        </div>
+        <div class="col-sm-1">
+          <h3 class="nav-loc"></h3>
+        </div>
+      </div>
+    </div>
+
 
     <!-- header -->
     <div class="container-fluid cover-img height">
     </div>
     <div class=" container-fluid header height">
     </div>
-    <div class=" container-fluid header_content height">
+    <div class=" container-fluid header_content">
       <div class="row">
         <div class="col-sm-1"></div>
         <div class="col-sm-10 center-align">
@@ -32,34 +47,39 @@
         <div class="col-sm-1"></div>
       </div>
       <div class="row">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-10">
+        <div class="col-sm-1 col-md-2"></div>
+        <div class="col-sm-10 col-md-8">
           <input class="search" type="text" name="search" placeholder="Nome ristorante, tipo cucina o piatto">
         </div>
-        <div class="col-sm-1"></div>
+        <div class="col-sm-1 col-md-2"></div>
       </div>
       <div class="row">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-10  rx-align">
+        <div class="col-sm-1 col-md-2"></div>
+        <div class="col-sm-10 col-md-8 rx-align">
           <img class="location-icon"src="source/location_white.svg" alt="location icon">
           <span id="position" class="loc"></span>
         </div>
       </div>
     </div>
 
-    <div class=" container-fluid near error">
-      <h1>Ristoranti vicini</h1>
+    <div class=" container-fluid div-pad near error">
+      <h1 class="rest-title">Ristoranti vicini</h1>
     </div>
 
-    <div class=" container-fluid collection error">
-      <h1>Collezioni</h1>
+    <div class=" container-fluid div-pad collection error">
+      <h1 class="rest-title">Collezioni</h1>
+      <div class="row coll-row">
+      </div>
     </div>
 
 
-
-
+    <div class="footer">
+      <span class="firm"> udead_gio </span>
+    </div>
     <!-- bootstrap js -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- My js -->
     <script src="js/index.js"></script>
   </body>
 </html>
