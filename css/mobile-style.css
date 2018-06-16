@@ -1,6 +1,59 @@
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 576px) {
+
+/* Navbar */
+
   .navbar{
-    height: 8vw;
+    height: 15vw;
+  }
+
+  .nav-logo{
+    font-size: 55px;
+    margin-top: 7%;
+    margin-bottom: 7%;
+  }
+
+  .nav-icon{
+    height: 80px;
+    margin: 2%;
+  }
+
+  .nav-loc{
+    font-size: 35px;
+  }
+
+
+/* header */
+
+  .search{
+    border-radius: 20px;
+    height: 75px;
+    font-size: 32px;
+    background-size: 60px;
+    background-position: 10px 10px;
+    text-indent:85px;
+  }
+
+  .loc{
+    font-size: 30px;
+  }
+
+  .location-icon{
+    width: 55px;
+  }
+
+/* near & collection */
+
+  .rest-title{
+    font-size: 50px;
+  }
+
+
+/* near card */
+
+  .rest-name{
+    color: #f65b5b;
+    font-size: 1.7em;
+    margin: 0;
   }
 
  }

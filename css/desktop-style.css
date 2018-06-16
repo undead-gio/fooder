@@ -1,9 +1,59 @@
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
+
+
+
+@media only screen and (min-width: 992px) {
+
+
+/* Navbar */
+
   .navbar{
     height: 4vw;
   }
-}
+
+  .nav-logo{
+    font-size: 1.5em;
+    -webkit-margin-before: 0.75em;
+    -webkit-margin-after: 0.75em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+  }
+
+  .nav-icon{
+    height: 33px;
+    margin: 14px;
+  }
+
+  .nav-loc{
+    font-size: 1.17em;
+    margin: 1.1em;
+    font-weight: bold;
+  }
 
 
-@media (min-width: 992px) {
+/* header */
+
+  .search{
+    border-radius: 10px;
+    font-size: 1.8em;
+    height: 55px;
+    background-size: 40px;
+    background-position: 10px 10px;
+    text-indent: 70px;
+  }
+
+  .loc{
+    font-size: 1.37em;
+  }
+
+  .location-icon{
+    width: 30px;
+  }
+
+
+/* near & collection */
+
+  .rest-title{
+    font-size: 3em;
+  }
 }
