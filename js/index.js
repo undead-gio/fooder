@@ -130,11 +130,11 @@ function Collection(collezioni){
        $('.coll-row').append(
          '<div class="col-sm-12 col-md-3 ow-pad"><div class="card-coll" style="background-image:url('
          + item.collection.image_url +')">' +
-         '<div class="all-text-coll"><h2 class="title-coll">' + item.collection.title + '</h2>' +
-         '<h3 class="descr-coll">'
+         '<div class="all-text-coll"><h2 class="title-coll w-800 no-marg">' + item.collection.title + '</h2>' +
+         '<h3 class="descr-coll w-400 no-marg">'
          + item.collection.description + '</h2>' +
          '<div class="red-line"></div>' +
-         '<h3 class="title-coll">' + item.collection.res_count + ' Ristoranti </h2>' +
+         '<h3 class="title-coll w-600 no-marg">' + item.collection.res_count + ' Ristoranti </h2>' +
          '</div></div></div>'
        )
     })
