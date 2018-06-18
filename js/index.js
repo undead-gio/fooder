@@ -39,7 +39,7 @@ function datiArrivati(city){
     id_entity = city.location.entity_id;
     type_entity = city.location.entity_type;
     $('#position').append(city.location.city_name + ', ' + city.location.title);
-    $('.nav-loc').append(city.location.city_name + ', ' + city.location.title);
+    $('.nav-loc').append(city.location.title);
 
     $.ajax({
             url: 'https://developers.zomato.com/api/v2.1/search',
@@ -78,23 +78,36 @@ function datiArrivati(city){
 }
 
 function Nearby(near) {
-  console.log(near)
+  console.log(near);
   near.restaurants.forEach(function(item, i){
+    let priceRange;
+    if(item.restaurant.price_range == 1){
+      priceRange = "€";
+    }
+    else if (item.restaurant.price_range == 2) {
+      priceRange = "€€";
+    }
+    else if (item.restaurant.price_range == 3) {
+      priceRange = "€€€";
+    }
+    else if (item.restaurant.price_range == 4) {
+      priceRange = "€€€€";
+    }
      $('.near').append(
        '<div class="row"><div class="col-md-2"></div><div class="col-sm-12 col-md-8"><div class="card-near" data-id="' + item.restaurant.id + '">' +
        '<div class="row" style="height:100%">' +
-         '<div class="col-sm-5">' +
+         '<div class="col-sm-5" style="height:100%">' +
            '<img class="near-img" src="'
            + item.restaurant.featured_image + '"/>' +
          '</div>' +
          '<div class="col-sm-5 align-self-center">' +
-           '<h3 class="restaurant-card-title no-marg w-400">' + item.restaurant.cuisines +
+           '<h3 class="restaurant-card-title no-marg cusines w-400">' + item.restaurant.cuisines +
            '</h3>'+
            '<h2 class="restaurant-card-title rest-name w-700">' + item.restaurant.name +
            '</h2>'+
-           '<h4 class="restaurant-card-address no-marg w-300">' + item.restaurant.location.address +
+           '<h4 class="restaurant-card-address no-marg rest-address w-300">' + item.restaurant.location.address +
            '</h4>'+
-           '<h2 class="restaurant-card-title w-400" style="margin-top:16%">' + item.restaurant.currency +
+           '<h2 class="restaurant-card-title w-400 price" style="">' + priceRange +
            '</h2>'+
          '</div>' +
          '<div class="col-sm-1">' +
@@ -104,7 +117,7 @@ function Nearby(near) {
              '<h2 class="restaurant-card-title w-700">' + item.restaurant.user_rating.aggregate_rating +
              '</h2>'+
           '</div>' +
-          '<h3 class="restaurant-card-title w-300" style="text-align:center">' + item.restaurant.user_rating.votes+
+          '<h3 class="restaurant-card-title votes w-300" style="text-align:center">' + item.restaurant.user_rating.votes+
           ' Voti</h3>'+
          '</div>' +
        '</div>' +
@@ -128,13 +141,15 @@ function Collection(collezioni){
     console.log(collezioni)
     collezioni.collections.forEach(function(item, i){
        $('.coll-row').append(
-         '<div class="col-sm-12 col-md-3 ow-pad"><div class="card-coll" style="background-image:url('
-         + item.collection.image_url +')">' +
-         '<div class="all-text-coll"><h2 class="title-coll w-800 no-marg">' + item.collection.title + '</h2>' +
-         '<h3 class="descr-coll w-400 no-marg">'
-         + item.collection.description + '</h2>' +
-         '<div class="red-line"></div>' +
-         '<h3 class="title-coll w-600 no-marg">' + item.collection.res_count + ' Ristoranti </h2>' +
+         '<div class="col-sm-12 col-md-3 ow-pad">' +
+            '<div class="card-coll" style="background-image:url('+ item.collection.image_url +')">' +
+            '<div class="cover-coll"></div>' +
+            '<div class="all-text-coll">' +
+             '<h2 class="title-coll w-800 coll-title no-marg">' + item.collection.title + '</h2>' +
+             '<h4 class="descr-coll w-300 coll-descr no-marg">'
+             + item.collection.description + '</h4>' +
+             '<div class="red-line"></div>' +
+             '<h3 class="title-coll w-600 coll-count no-marg">' + item.collection.res_count + ' Ristoranti </h3>' +
          '</div></div></div>'
        )
     })

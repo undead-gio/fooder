@@ -154,5 +154,6 @@ input:focus {
 }
 .firm{
   color: white;
-  font-size: 15px;
+  font-size: 1.1em;
+  padding-left: 20px;
 }

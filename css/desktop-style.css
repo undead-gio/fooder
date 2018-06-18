@@ -56,4 +56,54 @@
   .rest-title{
     font-size: 3em;
   }
+  .sub-title{
+    font-size: 1.5em;
+  }
+
+/* near card */
+
+  .rest-name{
+    color: #f65b5b;
+    font-size: 1.7em;
+    margin: 0;
+  }
+
+  .cusines{
+    font-size: 1.17em;
+  }
+
+  .rest-address{
+    font-size: 1em;
+  }
+
+  .price{
+    font-size: 1.5em;
+    display: block;
+  }
+
+  .cont-rec{
+    font-size: 1.2em;
+  }
+
+  .votes{
+    font-size: 1.17em;
+  }
+
+
+/* collection card */
+  .descr-coll{
+    width: 250px;
+  }
+  .coll-title{
+    font-size: 1.5em;
+  }
+
+  .coll-descr{
+    font-size: 1.1em;
+  }
+
+  .coll-count{
+    font-size: 1.1em;
+  }
+
 }

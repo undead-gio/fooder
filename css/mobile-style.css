@@ -8,17 +8,18 @@
 
   .nav-logo{
     font-size: 55px;
-    margin-top: 7%;
-    margin-bottom: 7%;
+    margin-top: 11%;
   }
 
   .nav-icon{
-    height: 80px;
-    margin: 2%;
+    height: 75px;
+    margin: 12%;
   }
 
   .nav-loc{
     font-size: 35px;
+    margin-right: 12%;
+    margin-top: 17%;
   }
 
 
@@ -44,7 +45,11 @@
 /* near & collection */
 
   .rest-title{
-    font-size: 50px;
+    font-size: 4.5em;
+  }
+
+  .sub-title{
+    font-size: 2.1em;
   }
 
 
@@ -52,8 +57,49 @@
 
   .rest-name{
     color: #f65b5b;
-    font-size: 1.7em;
+    font-size: 2.7em;
     margin: 0;
+  }
+
+  .cusines{
+    font-size: 1.7em;
+  }
+
+  .rest-address{
+    font-size: 1.5em;
+    color: grey;
+  }
+
+  .price{
+    font-size: 2.5em;
+    display: none;
+  }
+
+  .cont-rec{
+    font-size: 1.5em;
+  }
+
+  .votes{
+    font-size: 1.35em;
+  }
+
+/* collection card */
+
+  .descr-coll{
+    width: 450px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .coll-title{
+    font-size: 2.1em;
+  }
+
+  .coll-descr{
+    font-size: 1.4em;
+  }
+
+  .coll-count{
+    font-size: 1.7em;
   }
 
  }
