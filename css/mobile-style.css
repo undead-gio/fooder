@@ -1,3 +1,173 @@
+/* xs media */
+
+
+/* Navbar */
+
+  .navbar{
+    height: 15vw;
+  }
+
+  .nav-logo {
+    font-size: 2.2em;
+    margin-top: 10%;
+  }
+
+  .nav-icon {
+    height: 40px;
+    margin: 12%;
+  }
+
+  .nav-loc{
+    font-size: 1.2em;
+    margin-right: 15%;
+    margin-top: 18%;
+  }
+
+
+/* header */
+
+  .logo {
+    font-size: 6em;
+  }
+
+  .search{
+    border-radius: 10px;
+    height: 50px;
+    font-size: 1.1em;
+    background-size: 35px;
+    background-position: 10px 10px;
+    text-indent: 58px;
+  }
+
+  .nav-search {
+    z-index: 1;
+    height: 61px;
+    width: 270px;
+    font-size: 1.2em;
+    max-width:0;
+    padding: 5px;
+  }
+
+  .nav-search.expanded {
+     max-width:300px;
+     opacity:1;
+  }
+
+  .loc{
+    font-size: 1.2em;
+  }
+
+  .location-icon{
+    width: 55px;
+  }
+
+  .rx-align {
+    text-align: right;
+    padding-top: 15px;
+  }
+
+  .location-icon {
+    width: 30px;
+  }
+
+/* near & collection */
+
+  .rest-title{
+    font-size: 3em;
+  }
+
+  .sub-title{
+    font-size: 1.3em;
+  }
+
+
+/* near card */
+
+  .card-near{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 180px;
+    width: 100%;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
+  }
+
+  .near-img {
+    width: 95%;
+    height: 78%;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 10%;
+    border-radius: 5px;
+  }
+
+  .rest-name{
+    color: #f65b5b;
+    font-size: 1.7em;
+    margin: 0;
+  }
+
+  .cusines{
+    font-size: 1.1em;
+  }
+
+  .rest-address{
+    font-size: 1.05em;
+    color: grey;
+  }
+
+  .price{
+    font-size: 1.2em;
+    display: none;
+  }
+
+  .cont-rec{
+    font-size: 1.0em;
+  }
+
+  .votes{
+    font-size: 1.05em;
+  }
+
+  .rating{
+    padding-left: 0;
+    padding-right: 35px;
+  }
+
+  .cont-rec{
+    height: 35px;
+    line-height: 38px;
+    text-align: center;
+    width: 40px;
+    margin: 0 auto;
+  }
+
+/* collection card */
+  .card-coll{
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
+  }
+  .descr-coll{
+    width: 450px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .coll-title{
+    font-size: 2.1em;
+  }
+
+  .coll-descr{
+    font-size: 1.4em;
+  }
+
+  .coll-count{
+    font-size: 1.7em;
+  }
+
+
 @media only screen and (min-width: 576px) {
 
 /* Navbar */
@@ -55,6 +225,12 @@
 
 /* near card */
 
+  .card-near{
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
+  }
+
   .rest-name{
     color: #f65b5b;
     font-size: 2.7em;
@@ -84,7 +260,11 @@
   }
 
 /* collection card */
-
+  .card-coll{
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
+  }
   .descr-coll{
     width: 450px;
     margin-top: 10px;

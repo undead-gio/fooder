@@ -8,7 +8,7 @@
 /* Navbar */
 
   .navbar{
-    height: 4vw;
+    height: 60px;
   }
 
   .nav-logo{
@@ -30,8 +30,24 @@
     font-weight: bold;
   }
 
+  .nav-search {
+     height: 50px;
+     width: 240px;
+     max-width:0;
+     padding: 5px;
+  }
+
+  .nav-search.expanded {
+     max-width:300px;
+     opacity:1;
+  }
+
 
 /* header */
+
+  .logo{
+    font-size: 10em;
+  }
 
   .search{
     border-radius: 10px;
@@ -50,6 +66,11 @@
     width: 30px;
   }
 
+  .rx-align{
+    text-align: right;
+    padding-top: 25px;
+  }
+
 
 /* near & collection */
 
@@ -61,6 +82,26 @@
   }
 
 /* near card */
+
+  .card-near{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 250px;
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.35);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.35);
+    border-radius: 5px;
+  }
+
+  .near-img{
+    width: 95%;
+    height: 85%;
+    margin-top: 5%;
+    margin-left: 20px;
+    margin-bottom: 10%;
+    border-radius: 5px;
+  }
 
   .rest-name{
     color: #f65b5b;
@@ -89,11 +130,31 @@
     font-size: 1.17em;
   }
 
+  .rating{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .cont-rec{
+    height: 45px;
+    line-height: 47px;
+    text-align: center;
+    width: 56px;
+    margin: 0 auto;
+  }
+
 
 /* collection card */
+  .card-coll{
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.35);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.35);
+  }
+
   .descr-coll{
     width: 250px;
   }
+
   .coll-title{
     font-size: 1.5em;
   }

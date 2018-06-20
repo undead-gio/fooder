@@ -3,7 +3,6 @@
 @import 'dynamic_element.css';
 @import 'mobile-style.css';
 @import 'desktop-style.css';
-@import 'rest-page.css';
 
 
 html{
@@ -16,6 +15,7 @@ body{
   height: 100%;
   font-family: 'Lato', sans-serif;
   color: #303030;
+  padding: 0 !important;
 }
 
 /* Font weight */
@@ -58,7 +58,13 @@ body{
   margin-bottom: 0;
 }
 
+.marg10{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 /* Navbar */
+
 .navbar{
   width: 100%;
   background-color: #ffff;
@@ -67,13 +73,28 @@ body{
   -webkit-box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.4);
   box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.4);
-  z-index: 2;
+  z-index:9999;
+	display: none;
 }
  .nav-logo{
    vertical-align: middle;
    text-align: center;
    letter-spacing: 7px;
  }
+
+ .nav-search {
+    transition: all .5s ease;
+    position:absolute;
+    box-sizing:border-box;
+    opacity:0;
+    border: none;
+    background-color: #ffff;
+}
+
+.nav-search.expanded {
+    max-width:300px;
+    opacity:1;
+}
 
 
 /* Header */
@@ -108,7 +129,6 @@ body{
 }
 
 .logo{
-  font-size: 10em;
   color: white;
   letter-spacing: 7px;
 }
@@ -116,7 +136,7 @@ body{
 .search{
   background-color: white;
   width: 100%;
-  background-image:url("../source/search_black.svg");
+  background-image:url("../source/search_grey.svg");
   background-repeat: no-repeat;
   border: none;
 }
@@ -127,14 +147,10 @@ input:focus {
 }
 
 
-.rx-align{
-  text-align: right;
-  padding-top: 25px;
-}
-
 .center-align{
   text-align: center;
 }
+
 
 
 /* Near & collection */
@@ -156,4 +172,46 @@ input:focus {
   color: white;
   font-size: 1.1em;
   padding-left: 20px;
+}
+
+
+/* modal */
+.fooder-modal{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.fooder-modal-dialog{
+  margin: 0 !important;
+  width: auto;
+  display: flex;
+  align-items: stretch;
+}
+
+.fooder-modal-content{
+  border-radius: 0;
+  box-shadow: none;
+  border:0;
+  flex-grow: 1;
+}
+
+.modal-header{
+  border-bottom: none;
+  position: absolute;
+  top: 70px;
+  z-index: 100;
+}
+
+.modal-body{
+  padding: 0;
+}
+
+.back-modal{
+  height: 40px;
+}
+
+.close {
+    float: right;
+    font-size: 21px;
+    opacity: 1;
+    filter: alpha(opacity=20);
 }
