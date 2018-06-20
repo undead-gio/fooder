@@ -1,7 +1,9 @@
-let latitude = ''
-    longitude = ''
-    id_entity = ''
-    type_entity = ''
+let latitude,
+    longitude,
+    id_entity,
+    type_entity,
+    lat_rest,
+    long_rest
 
 /* funzione che restituisce latitudine e longitudine, le quali sono utilizzate in una chiamata ajax all'api di zomato */
 

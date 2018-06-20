@@ -35,6 +35,10 @@ body{
   font-weight: 700;
 }
 
+.w-900{
+  font-weight: 900;
+}
+
 /* paddin & margin */
 .no-padding{
   padding: 0;

@@ -1,32 +1,22 @@
-
 /* questa funzione genera le card con i ristoranti più vicini alla tua posizione */
 
 function Nearby(near) {
   console.log(near);
-
   let withPhoto = near.restaurants.filter(function(item){
-          return item.restaurant.featured_image
+        return item.restaurant.featured_image
       })
   withPhoto.forEach(function(item, i){
-
-    let priceRange;
-
-    if(item.restaurant.price_range == 1){
-      priceRange = "€";
-    }
-    else if (item.restaurant.price_range == 2) {
-      priceRange = "€€";
-    }
-    else if (item.restaurant.price_range == 3) {
-      priceRange = "€€€";
-    }
-    else if (item.restaurant.price_range == 4) {
-      priceRange = "€€€€";
-    }
-
-    let restName,
+    let priceRange,
+        restName,
         restAddress,
-        restCuisine
+        restCuisine,
+        distance_range
+
+
+    distance_range = distanceCalculation(item);
+
+    priceRange = restPrice(item);
+
 
     if (item.restaurant.cuisines.length > 25) {
       restCuisine = item.restaurant.cuisines.substr(0,25) + '...';
@@ -73,6 +63,8 @@ function Nearby(near) {
           '</div>' +
           '<h3 class="restaurant-card-title votes w-300" style="text-align:center">' + item.restaurant.user_rating.votes+
           ' Voti</h3>'+
+          '<h2 class="restaurant-card-distance w-900">' + distance_range +
+          '</h2>'+
          '</div>' +
        '</div>' +
        '</div><div class="col-md-2"></div>' +

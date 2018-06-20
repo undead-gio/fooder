@@ -129,11 +129,13 @@
 
   .votes{
     font-size: 1.17em;
+    padding-left: 0px;
   }
 
   .rating{
     padding-left: 0;
     padding-right: 0;
+    right: -10px;
   }
 
   .cont-rec{
@@ -142,6 +144,12 @@
     text-align: center;
     width: 56px;
     margin: 0 auto;
+  }
+
+  .restaurant-card-distance{
+    text-align: center;
+    margin-top: 80px;
+    font-size: 1.8em;
   }
 
 

@@ -6,24 +6,14 @@ function restCard(restcard){
       })
   withPhoto.forEach(function(item, i){
 
-    let priceRange;
-
-    if(item.restaurant.price_range == 1){
-      priceRange = "€";
-    }
-    else if (item.restaurant.price_range == 2) {
-      priceRange = "€€";
-    }
-    else if (item.restaurant.price_range == 3) {
-      priceRange = "€€€";
-    }
-    else if (item.restaurant.price_range == 4) {
-      priceRange = "€€€€";
-    }
-
-    let restName,
+    let priceRange,
+        restName,
         restAddress,
         restCuisine
+
+    distance_range = distanceCalculation(item);
+
+    priceRange = restPrice(item);
 
     if (item.restaurant.cuisines.length > 25) {
       resCuisine = item.restaurant.cuisines.substr(0,25) + '...';
@@ -45,6 +35,7 @@ function restCard(restcard){
     else {
       restAddress = item.restaurant.location.address;
     }
+
 
      $('.modal-body').append(
        '<div class="row rest-row"><div class="col-md-2"></div><div class="col-xs-12 col-sm-12 col-md-8"><div class="card-near" data-id="' + item.restaurant.id + '">' +
@@ -70,10 +61,35 @@ function restCard(restcard){
           '</div>' +
           '<h3 class="restaurant-card-title votes w-300" style="text-align:center">' + item.restaurant.user_rating.votes+
           ' Voti</h3>'+
+          '<h2 class="restaurant-card-distance w-900">' + distance_range +
+          '</h2>'+
          '</div>' +
        '</div>' +
        '</div><div class="col-md-2"></div>' +
        '</div></div></div>'
      )
   })
+}
+
+
+/* funzione che attribuisce "€" in base ad una scala da 0 e 4, e riduce di lunghezza tutte le parole nel titolo >n */
+
+function restPrice(price){
+
+  let priceData
+
+  if(price.restaurant.price_range == 1){
+    priceData = "€";
+  }
+  else if (price.restaurant.price_range == 2) {
+    priceData = "€€";
+  }
+  else if (price.restaurant.price_range == 3) {
+    priceData = "€€€";
+  }
+  else if (price.restaurant.price_range == 4) {
+    priceData = "€€€€";
+  }
+
+  return priceData
 }
