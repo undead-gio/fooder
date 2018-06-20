@@ -4,23 +4,23 @@
 /* Navbar */
 
   .navbar{
-    height: 15vw;
+    height: 60px;
   }
 
   .nav-logo {
-    font-size: 2.2em;
-    margin-top: 10%;
+    font-size: 1.8em;
+    margin-top: 13px;;
   }
 
   .nav-icon {
-    height: 40px;
-    margin: 12%;
+    height: 35px;
+    margin: 14px;
   }
 
   .nav-loc{
-    font-size: 1.2em;
-    margin-right: 15%;
-    margin-top: 18%;
+    font-size: 1.1em;
+    margin-right: 14px;
+    margin-top: 19px;
   }
 
 
@@ -41,11 +41,12 @@
 
   .nav-search {
     z-index: 1;
-    height: 61px;
-    width: 270px;
+    height: 40px;
+    width: 225px;
     font-size: 1.2em;
     max-width:0;
     padding: 5px;
+    margin-top: 5%;
   }
 
   .nav-search.expanded {
@@ -85,7 +86,7 @@
 
   .card-near{
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     height: 180px;
     width: 100%;
     border-radius: 5px;
@@ -105,8 +106,9 @@
 
   .rest-name{
     color: #f65b5b;
-    font-size: 1.7em;
+    font-size: 1.3em;
     margin: 0;
+    line-height: 25px;
   }
 
   .cusines{
@@ -128,7 +130,7 @@
   }
 
   .votes{
-    font-size: 1.05em;
+    font-size: 0.8em;
   }
 
   .rating{
@@ -146,140 +148,141 @@
 
 /* collection card */
   .card-coll{
+    width:100%;
+    height:180px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-radius: 0px;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
   }
+
+  .ow-pad {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .cover-coll{
+    width: 100%;
+    height:180px;
+    border-radius: 0px;
+  }
+
+  .all-text-coll{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    color: white;
+  }
+
   .descr-coll{
     width: 450px;
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
   .coll-title{
-    font-size: 2.1em;
+    font-size: 1.3em;
   }
 
   .coll-descr{
-    font-size: 1.4em;
+    font-size: 1em;
+    width: 260px;
   }
 
   .coll-count{
+    font-size: 1.1em;
+  }
+
+  .red-line {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+  /* collection page */
+  .coll-page-img {
+    width: 100%;
+    height: 400px;
+    margin-top: 55px;
+    margin-bottom: 20px;
+  }
+
+  .cover-coll-page{
+    width: 100%;
+    height: 400px;
+  }
+
+  .coll-row{
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .rest-row{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .all-text-coll-page{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    color: white;
+  }
+
+  .coll-title-page{
     font-size: 1.7em;
+  }
+
+  .coll-descr-page{
+    font-size: 1.1em;
+    width: 230px;
+  }
+
+  .coll-count-page{
+    font-size: 1.3em;
+  }
+
+  /* search page */
+  .text-search{
+    padding-top: 30%;
+    padding-left: 20%;
+    padding-bottom: 10%;
   }
 
 
 @media only screen and (min-width: 576px) {
 
-/* Navbar */
-
-  .navbar{
-    height: 15vw;
+  .logo {
+    font-size: 8em;
   }
 
-  .nav-logo{
-    font-size: 55px;
-    margin-top: 11%;
-  }
-
-  .nav-icon{
-    height: 75px;
-    margin: 12%;
-  }
-
-  .nav-loc{
-    font-size: 35px;
-    margin-right: 12%;
-    margin-top: 17%;
-  }
-
-
-/* header */
-
-  .search{
-    border-radius: 20px;
-    height: 75px;
-    font-size: 32px;
-    background-size: 60px;
-    background-position: 10px 10px;
-    text-indent:85px;
-  }
-
-  .loc{
-    font-size: 30px;
-  }
-
-  .location-icon{
-    width: 55px;
-  }
-
-/* near & collection */
-
-  .rest-title{
-    font-size: 4.5em;
-  }
-
-  .sub-title{
-    font-size: 2.1em;
-  }
-
-
-/* near card */
-
-  .card-near{
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
-  }
-
-  .rest-name{
-    color: #f65b5b;
-    font-size: 2.7em;
-    margin: 0;
-  }
-
-  .cusines{
-    font-size: 1.7em;
-  }
-
-  .rest-address{
-    font-size: 1.5em;
-    color: grey;
-  }
-
-  .price{
-    font-size: 2.5em;
-    display: none;
-  }
-
-  .cont-rec{
-    font-size: 1.5em;
-  }
-
-  .votes{
-    font-size: 1.35em;
-  }
-
-/* collection card */
+  /* coll card */
   .card-coll{
+    width:100%;
+    height:180px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-radius: 5px;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
   }
-  .descr-coll{
-    width: 450px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  .coll-title{
-    font-size: 2.1em;
+
+  .coll-row{
+    margin-left: -5px;
+    margin-right: -5px;
   }
 
-  .coll-descr{
-    font-size: 1.4em;
+  .ow-pad {
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
-  .coll-count{
-    font-size: 1.7em;
+  .cover-coll{
+    width: 100%;
+    height:180px;
+    border-radius: 5px;
   }
 
  }

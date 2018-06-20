@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
 let query="";
     /* chiamata API dopo la pressione di 3 tasti */
     $('.search').on("keyup", function(event){
@@ -53,10 +53,7 @@ let query="";
       $(".search").keypress(function(e) {
         if (e.which == 13) {
           $("#collect-modal").modal();
-          $( ".modal-body" ).empty();
-          $( ".modal-body" ).append(
-            '<h1 class"text-search"> Risultati ricerca per: ' + query + '</h1>'
-          );
+          $('.navbar').fadeIn(300);
           $.ajax({
               url: 'https://developers.zomato.com/api/v2.1/search',
               dataType: 'json',
@@ -76,4 +73,3 @@ let query="";
         }
       });
     }
-});

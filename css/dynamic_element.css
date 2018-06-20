@@ -52,6 +52,7 @@
   border-radius: 5px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center, center;
 }
 
 
@@ -75,27 +76,17 @@
 /* Coll card */
 
 .card-coll{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width:100%;
-  height:25vw;
   -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.35);
   -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.35);
   box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.35);
-  border-radius: 5px;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.all-text-coll{
-  position: absolute;
-  bottom: 10%;
-  left: 10%;
-  color: white;
-}
-
-.title-coll{
-
+.cover-coll{
+  background-color: #303030;
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 .descr-coll{
@@ -111,14 +102,6 @@
   background-color: #f65b5b;
 }
 
-.cover-coll{
-  width: 100%;
-  height:25vw;
-  border-radius: 5px;
-  background-color: #303030;
-  opacity: 0.5;
-  cursor: pointer;
-}
 
 @keyframes opacity-coll {
     from {opacity: 0.5;}
@@ -138,39 +121,21 @@
   background-position: center, center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
-  height: 30vw;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  position: relative;
 }
 
 .cover-coll-page{
-  width: 100%;
-  height:30vw;
   background-color: #303030;
   opacity: 0.5;
 }
 
 .all-text-coll-page{
   position: absolute;
-  top: 3%;
-  left: 5%;
   color: #ffff;
 }
 
-.coll-title-page{
-  font-size: 2.5em;
-}
-
-.coll-descr-page{
-  font-size: 1.5em;
-}
-
-.coll-count-page{
-  font-size: 2.1em;
-}
 
 /* search page */
 .text-search{
-  padding-left: 10%;
+  color: grey;
 }

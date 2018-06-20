@@ -1,4 +1,6 @@
-/* create rest card for collection */
+
+/* funzione di callback di collection, per la creazione di card ristoranti realtive all'id collezione */
+
 function CollectionPage(collPage){
   console.log(collPage);
   restCard(collPage);
@@ -9,6 +11,15 @@ function CollectionPage(collPage){
 };
 
 
+/* funzione di callback dellautocompilazione, per la creazione di card ristoranti realtive alla query cercata */
+
 function modalSearch(searchRest) {
+  $( ".modal-body" ).empty();
+  $( ".modal-body" ).append(
+    '<h1 class="text-search"> Risultati ricerca per: ' + query + '</h1>'
+  );
   restCard(searchRest);
+  $('.close').click(function(event) {
+    $('.navbar').fadeOut(300);
+  });
 }

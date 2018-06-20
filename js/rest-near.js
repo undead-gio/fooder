@@ -1,7 +1,10 @@
-/* create restaurant card function */
 
-function restCard(restcard){
-  let withPhoto = restcard.restaurants.filter(function(item){
+/* questa funzione genera le card con i ristoranti più vicini alla tua posizione */
+
+function Nearby(near) {
+  console.log(near);
+
+  let withPhoto = near.restaurants.filter(function(item){
           return item.restaurant.featured_image
       })
   withPhoto.forEach(function(item, i){
@@ -26,7 +29,7 @@ function restCard(restcard){
         restCuisine
 
     if (item.restaurant.cuisines.length > 25) {
-      resCuisine = item.restaurant.cuisines.substr(0,25) + '...';
+      restCuisine = item.restaurant.cuisines.substr(0,25) + '...';
     }
     else {
       restCuisine = item.restaurant.cuisines;
@@ -46,8 +49,8 @@ function restCard(restcard){
       restAddress = item.restaurant.location.address;
     }
 
-     $('.modal-body').append(
-       '<div class="row rest-row"><div class="col-md-2"></div><div class="col-xs-12 col-sm-12 col-md-8"><div class="card-near" data-id="' + item.restaurant.id + '">' +
+     $('.near').append(
+       '<div class="row"><div class="col-md-2"></div><div class="col-xs-12 col-sm-12 col-md-8"><div class="card-near" data-id="' + item.restaurant.id + '">' +
        '<div class="row" style="height:100%">' +
          '<div class="col-xs-5 col-sm-5" style="height:100%">' +
            '<div class="near-img" style="background-image:url('
@@ -76,4 +79,8 @@ function restCard(restcard){
        '</div></div></div>'
      )
   })
+  $('.card-near').click(function(event) {
+    let id = $(this).data('id');
+    console.log("Elemento cliccato", $(this).data('id'));
+  });
 }

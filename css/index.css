@@ -44,15 +44,6 @@ body{
   margin: 0;
 }
 
-.ow-pad{
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.div-pad{
-  padding-left: 20px;
-  padding-right: 20px;
-}
 
 .tile-marg{
   margin-bottom: 0;
@@ -214,4 +205,9 @@ input:focus {
     font-size: 21px;
     opacity: 1;
     filter: alpha(opacity=20);
+}
+
+.close:focus{
+  border: none;
+  outline: none;
 }
