@@ -1,20 +1,21 @@
-/* create restaurant card function */
 
+//funzione per la creazione delle card per i ristoranti
 function restCard(restcard){
-  let withPhoto = restcard.restaurants.filter(function(item){
+  let withPhoto = restcard.restaurants.filter(function(item){ //filtro inserendo in un nuovo array gli elementi con le immangini disponibili
           return item.restaurant.featured_image
       })
-  withPhoto.forEach(function(item, i){
+  withPhoto.forEach(function(item, i){ //per ogni elemento dell'array
 
     let priceRange,
         restName,
         restAddress,
         restCuisine
 
-    distance_range = distanceCalculation(item);
+    distance_range = distanceCalculation(item); //funzione per il calcolo distanza
 
-    priceRange = restPrice(item);
+    priceRange = restPrice(item); //funzione per il range di prezzo
 
+    //controllo sui caratteri e se > di n allora vengono tagliati e sostituiti da "..."
     if (item.restaurant.cuisines.length > 25) {
       resCuisine = item.restaurant.cuisines.substr(0,25) + '...';
     }
@@ -36,7 +37,7 @@ function restCard(restcard){
       restAddress = item.restaurant.location.address;
     }
 
-
+    //inserisco nell'html
      $('.modal-body').append(
        '<div class="row rest-row error"><div class="col-md-2"></div><div class="col-xs-12 col-sm-12 col-md-8"><div class="card-near" data-id="' + item.restaurant.id + '">' +
        '<div class="row" style="height:100%">' +
@@ -72,7 +73,7 @@ function restCard(restcard){
 }
 
 
-/* funzione che attribuisce "€" in base ad una scala da 0 e 4, e riduce di lunghezza tutte le parole nel titolo >n */
+// funzione che attribuisce "€" in base ad una scala da 0 e 4,
 
 function restPrice(price){
 

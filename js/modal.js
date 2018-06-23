@@ -1,8 +1,6 @@
 
-/* funzione di callback di collection, per la creazione di card ristoranti realtive all'id collezione */
-
+// funzione di callback di collection, per la creazione di card ristoranti realtive all'id collezione
 function CollectionPage(collPage){
-  console.log(collPage);
   restCard(collPage);
   $('.card-near').click(function(event) {
     let id = $(this).data('id');
@@ -11,8 +9,7 @@ function CollectionPage(collPage){
 };
 
 
-/* funzione di callback dellautocompilazione, per la creazione di card ristoranti realtive alla query cercata */
-
+// funzione di callback dellautocompilazione, per la creazione di card ristoranti realtive alla query cercata
 function modalSearch(searchRest) {
   $( ".modal-body" ).empty();
   $( ".modal-body" ).append(

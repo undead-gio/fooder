@@ -1,5 +1,5 @@
 
-/* funziona per calcolare la distanza in linea d'aria tra due punti */
+// funziona per calcolare la distanza in linea d'aria tra due punti
 
 function distance(lat1, lon1, lat2, lon2, unit) {
     let radlat1 = Math.PI * lat1/180,
@@ -18,13 +18,13 @@ function distance(lat1, lon1, lat2, lon2, unit) {
     return dist
 }
 
-/* funzione che arrotonda la distanza e se > di 1000m imposta unità di misura km */
+// funzione che arrotonda la distanza e se > di 1000m imposta unità di misura km
 
 function distanceCalculation(dist){
   lat_rest= dist.restaurant.location.latitude;
   long_rest= dist.restaurant.location.longitude;
 
-  let distance_range = distance(latitude, longitude, lat_rest, long_rest, 'K');
+  let distance_range = distance(latitude, longitude, lat_rest, long_rest, 'K'); //assegno alla variabile il risultato ottenuto dalla funzione per il calcolo delle distanze
 
   distance_range *= 1000;
   distance_range = Math.floor(distance_range);

@@ -1,7 +1,6 @@
 // questa funzione genera le card con i ristoranti più vicini alla tua posizione
 
 function Nearby(near) {
-  console.log(near);
   let withPhoto = near.restaurants.filter(function(item){
         return item.restaurant.featured_image
       })

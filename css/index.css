@@ -210,6 +210,10 @@ input:focus {
   height: 40px;
 }
 
+.modal-header .close {
+    margin-top: -30px;
+}
+
 .close {
     float: right;
     font-size: 21px;

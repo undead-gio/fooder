@@ -1,8 +1,6 @@
 
-/* questa funzione genera le card collezione in base alla posizione */
-
+//funzione che genera le card collezione in base alla posizione
 function Collection(collezioni){
-    console.log(collezioni)
     collezioni.collections.forEach(function(item, i){
        $('.coll-row').append(
          '<div class="col-xs-12 col-sm-6 col-md-3 ow-pad">' +
@@ -18,7 +16,7 @@ function Collection(collezioni){
        )
     });
 
-    /* funzione al click della card collezione, genera nuova chiamata ajax per ricevere i ristoranti relativi */
+    // funzione al click della card collezione, genera nuova chiamata ajax per ricevere i ristoranti relativi
     $('.card-coll').click(function(event){
       let coll = $(this).data('id');
       let selectColl = collezioni.collections.filter(function(item, i){
@@ -55,6 +53,4 @@ function Collection(collezioni){
           });
 
     });
-
-
 };

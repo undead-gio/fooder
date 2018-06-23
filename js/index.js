@@ -5,8 +5,7 @@ let latitude,
     lat_rest,
     long_rest
 
-/* funzione che restituisce latitudine e longitudine, le quali sono utilizzate in una chiamata ajax all'api di zomato */
-
+// funzione che restituisce latitudine e longitudine, le quali sono utilizzate in una chiamata ajax all'api di zomato
 function success(position){
     latitude = position.coords.latitude
     longitude = position.coords.longitude
@@ -25,32 +24,26 @@ function success(position){
     })
 }
 
-/* funzione di errore, nel caso non si accettasse di accedere alla propria posizione */
-
+// funzione di errore, nel caso non si accettasse di accedere alla propria posizione
 function error(err){
-    console.error(err)
-    $('.near').css('display', 'none');
+    $('.near').css('display', 'none'); //nascondo sezioni near e collection
     $('.collection').css('display', 'none');
     alert("Per l'utilizzo di questa applicazione è necessaria la geolocalizzazione");
 }
 
-/* funzione di errore, nel caso la chiamata ajax all'API non andasse a buon fine */
-
+// funzione di errore, nel caso la chiamata ajax all'API non andasse a buon fine
 function GeneralError() {
   $('.error').append('<h2 class="error-message"> La ricerca non ha prodotto nessun risultato, prova a ricaricare la pagina :) </h2>');
 }
 
-/* funzione invocata all'arrivo dei dati dalla prima chiamata ajax */
-
+// funzione invocata all'arrivo dei dati dalla prima chiamata ajax
 function datiArrivati(city){
-    console.log(city);
     id_entity = city.location.entity_id;
     type_entity = city.location.entity_type;
     $('#position').append(city.location.city_name + ', ' + city.location.title);
     $('.nav-loc').append(city.location.title);
 
-    /* chiamata ajax per generare ristoranti vicino alla propria posizione */
-
+    // chiamata ajax per generare ristoranti vicino alla propria posizione
     $.ajax({
             url: 'https://developers.zomato.com/api/v2.1/search',
             dataType: 'json',
@@ -71,8 +64,7 @@ function datiArrivati(city){
             error: GeneralError
         })
 
-    /* chiamata ajax per generare collezioni di ristoranti vicino alla propria posizione */
-
+    // chiamata ajax per generare collezioni di ristoranti vicino alla propria posizione
     $.ajax({
             url: 'https://developers.zomato.com/api/v2.1/collections',
             dataType: 'json',
@@ -89,14 +81,12 @@ function datiArrivati(city){
         })
 }
 
-/* espande l'input text del search nella navbar */
-
+//espande l'input text del search nella navbar
 $('.nav-icon').click(function() {
     $('.nav-search').toggleClass('expanded');
 });
 
-/* richiesta di rilevamento posizione del browser */
-
+// richiesta di rilevamento posizione del browser
 if(navigator.geolocation){
     console.log('location service is active');
     navigator.geolocation.getCurrentPosition(success, error);

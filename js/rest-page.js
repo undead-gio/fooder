@@ -125,6 +125,7 @@ function restPage(rest){
   })
 }
 
+//funzione  per la creazione sezione recensioni !non ancora implementata
 function reviews(review){
   console.log(review)
   review.user_reviews.forEach(function(item, i){
