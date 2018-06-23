@@ -33,11 +33,11 @@ function restPage(rest){
     '</div>' +
     '<div class="contRest container">' +
       '<div class="row card-title">' +
-        '<div class="col-xs-12 col-sm-8 col-md-8">' +
+        '<div class="col-xs-7 col-sm-8 col-md-8">' +
           '<h1 class="restName w-700">' + rest.name + '</h1>' +
             '<h3 class="rest-cuisine w-400">' + rest.cuisines + '</h3>' +
         '</div>' +
-        '<div class="col-xs-12 col-sm-4 col-md-4" style="text-align:right">' +
+        '<div class="col-xs-5 col-sm-4 col-md-4" style="text-align:right">' +
           '<div class="cont-rec-rest" style="background-color: #'+ rest.user_rating.rating_color +'">' +
             '<h2 class="rest-rating w-700">' + rest.user_rating.aggregate_rating + '/5</h2>'+
          '</div>' +
@@ -59,6 +59,7 @@ function restPage(rest){
         '<div class="col-xs-12 col-sm-6 col-md-4">' +
           '<h2 class="rest-add w-400">Indirizzo</h2>' +
           '<h3 class="w-300 no-marg">' + rest.location.address + '</h3>' +
+          '<div id="mapid"></div>' +
         '</div>' +
         '<div class="col-xs-12 col-sm-6 col-md-4">' +
           '<h2 class="rest-info w-400">More Info</h2>' +
@@ -68,8 +69,17 @@ function restPage(rest){
       /*'<h2 class="rest_Inf w-400">Recensioni</h2>' +
       '<div class="reviews"></div>' +*/
     '</div>'
-    
+
   );
+
+  let map = L.map('mapid').setView([rest.location.latitude, rest.location.longitude], 20);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  L.marker([rest.location.latitude, rest.location.longitude]).addTo(map)
+      .bindPopup(rest.name)
 
 
 // effettuo vari controlli su ulteriori informazioni, sbarrando i servizi non disponibili

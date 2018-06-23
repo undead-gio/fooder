@@ -39,6 +39,12 @@ body{
   font-weight: 900;
 }
 
+/* map */
+#mapid {
+    margin-top: 10px;
+    height: 280px;
+}
+
 /* paddin & margin */
 .no-padding{
   padding: 0;
