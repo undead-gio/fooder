@@ -38,7 +38,7 @@ function restCard(restcard){
 
 
      $('.modal-body').append(
-       '<div class="row rest-row"><div class="col-md-2"></div><div class="col-xs-12 col-sm-12 col-md-8"><div class="card-near" data-id="' + item.restaurant.id + '">' +
+       '<div class="row rest-row error"><div class="col-md-2"></div><div class="col-xs-12 col-sm-12 col-md-8"><div class="card-near" data-id="' + item.restaurant.id + '">' +
        '<div class="row" style="height:100%">' +
          '<div class="col-xs-5 col-sm-5" style="height:100%">' +
            '<div class="near-img" style="background-image:url('
