@@ -44,6 +44,7 @@ let query="";
       /* selezione consigliati di ricerca */
       $('.search-el').click(function(event) {
         let id = $(this).data('id');
+        $('.navbar').fadeIn(300);
         restCall(id);
       });
 

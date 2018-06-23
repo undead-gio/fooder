@@ -18,7 +18,7 @@ function restCall(id){
 
 // funzione per la creazione della pagina del ristorante
 function restPage(rest){
-
+  $( ".modal-body" ).empty();
   let phoneNumber;
   if(rest.phone_numbers == undefined){
     phoneNumber = "Telefono non disponibile";
@@ -108,6 +108,10 @@ function restPage(rest){
   } else{
     $( ".moreInfo" ).append('<h3 class="si-info w-300">Offerte del giorno</h3>');
   }
+
+  $('.close').click(function(event) {
+    $('.navbar').fadeOut(300);
+  });
 
   // chiamata ajax a API per ottenere le recensioni relative al ristorante
   $.ajax({
