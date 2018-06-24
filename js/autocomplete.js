@@ -25,7 +25,8 @@ let query="";
 
     // funzione di risposta API
     function autoCompl(autoQuery) {
-      $('.autocomplete').empty(); //svuoto div autocomplete
+
+    $('.autocomplete').empty(); //svuoto div autocomplete
 
       let first5 = autoQuery.restaurants.slice(0, 5);   //ritorna solo i primi 5 risultati
 
